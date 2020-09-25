@@ -51,7 +51,7 @@ user_photos = ["https://ca.slack-edge.com/T02MD9XTF-U0185TA4UNR-f0bc51457b29-512
     "https://images.unsplash.com/photo-1597783252831-b2180a03ed11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"]
 
 
-city_name = ["Washington, DC", "New York", "Los Angeles"]
+# city_name = ["Washington, DC", "New York", "Los Angeles"]
 
 
 
@@ -60,18 +60,18 @@ city_name = ["Washington, DC", "New York", "Los Angeles"]
                 genre: Faker::Book.genre)
 end 
 
-33.times do 
 
-    User.create(name: Faker::Name.name, 
-                age: rand(19...50), 
-                phone_number: Faker::PhoneNumber.cell_phone,
-                bio: Faker::Quote.most_interesting_man_in_the_world,
-                photo: user_photos.uniq.sample)
-end 
 
 
 3.times do 
-
-    City.create(name: city_name.shuffle.pop )
-
+    City.create(name: Faker::Movies::HitchhikersGuideToTheGalaxy.location)
 end 
+32.times do
+    rand_city_id = rand((City.first.id)..(City.last.id))
+    User.create(name: Faker::FunnyName.name, 
+                age: rand(19..50), 
+                phone_number: Faker::PhoneNumber.cell_phone, 
+                bio: Faker::Quote.most_interesting_man_in_the_world, 
+                photo: user_photos.sample, 
+                city_id: rand_city_id)
+end

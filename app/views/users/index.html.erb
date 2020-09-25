@@ -1,0 +1,8 @@
+<h2>All the People</h2>
+<br>
+
+<div>
+<% @users.each do |user| %>
+  <p><%= link_to user.name, user_path(user) %><br>  City:<%= user.city.name %></p><br>
+ <% end %>
+ </div>
