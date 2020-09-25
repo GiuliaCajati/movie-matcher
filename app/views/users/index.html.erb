@@ -1,6 +1,6 @@
 <h2>All the People</h2>
 <br>
-
+<%= link_to "Create New User", new_user_path %>
 <div>
 <% @users.each do |user| %>
   <p><%= link_to user.name, user_path(user) %><br>  City:<%= user.city.name %></p><br>

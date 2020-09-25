@@ -1,0 +1,26 @@
+<%= form_for @user do |f| %>
+<%= f.label :name, "User Name:" %>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.label :age, "Age:" %>
+<%= f.number_field :age %>
+<br>
+<br>
+<%= f.label :phone_number, "Phone Number:" %>
+<%= f.text_field :phone_number %>
+<br>
+<br>
+<%= f.label :bio, "Bio:" %>
+<%= f.text_field :bio %>
+<br>
+<br>
+<%= f.label :photo, "Picture:" %>
+<%= f.text_field :photo %>
+<br>
+<br>
+ <%= f.label :city_id, "Initiator:" %>
+<%= f.collection_select(:city_id, City.all, :id, :name)%>
+ <%= f.submit button_text %>
+<% end %>
+
