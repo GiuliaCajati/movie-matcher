@@ -1,0 +1,2 @@
+class UserMovieMatchesController < ApplicationController
+end
