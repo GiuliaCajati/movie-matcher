@@ -8,6 +8,7 @@
 Movie.destroy_all 
 User.destroy_all 
 City.destroy_all 
+UserMovieMatch.destroy_all
 
 user_photos = ["https://ca.slack-edge.com/T02MD9XTF-U0185TA4UNR-f0bc51457b29-512", 
     "https://ca.slack-edge.com/T02MD9XTF-U018KT73BK3-e5fcb27689d7-512",
@@ -75,4 +76,12 @@ end
                 bio: Faker::Quote.most_interesting_man_in_the_world, 
                 photo: user_photos.sample, 
                 city_id: rand_city_id)
+end
+
+
+User.all.each do |user|
+    10.times do 
+        rand_movie_id = rand((Movie.first.id)..(Movie.last.id))
+        UserMovieMatch.create(user_id: user.id, movie_id: rand_movie_id)
+    end
 end

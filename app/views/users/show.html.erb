@@ -8,5 +8,11 @@
 <br><br>
 <img src=<%= @user.photo %> height="300">
 <br>
+<h3>Favorite Movies:</h3>
+<ol>
+  <% @user.movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
+    <% end %>
+</ol>
 </div>
 
