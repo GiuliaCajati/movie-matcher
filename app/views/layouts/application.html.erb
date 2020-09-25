@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <div class = "header"> 
+<ul>
+    <%= link_to "All Users", users_path %> 
+    <br>
+    <br>
+    <%= link_to "All Movies", movies_path %> 
+
+</ul>
+</div>
     <%= yield %>
   </body>
 </html>
