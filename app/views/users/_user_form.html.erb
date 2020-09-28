@@ -1,3 +1,11 @@
+<% if @user.errors %>
+    <ul>
+        <% @user.errors.full_messages.each do |error|%>
+            <li><%= error %></li>
+        <% end %>
+    </ul>
+<% end %>
+
 
 <%= form_for @user do |f| %>
 <%= f.label :name, "User Name:" %>
@@ -16,7 +24,7 @@
 <br>
 <br>
 <%= f.label :bio, "Bio:" %>
-<%= f.text_field :bio %>
+<%= f.text_area :bio %>
 <br>
 <br>
 <br>

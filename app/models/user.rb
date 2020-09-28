@@ -3,15 +3,10 @@ class User < ApplicationRecord
     has_many :user_movie_matches
     has_many :movies, through: :user_movie_matches
 
-    def create_user_movie_match(movies)
-        movies.each do |movie_id|
-           if movie_id.length == 0 
-                next 
-           else
-               movie_selection = Movie.find(movie_id.to_i)
-               UserMovieMatch.create(user_id: self.id, movie_id: movie_selection)
-           end 
-        end 
-    end
+    validates :name, presence: true, uniqueness: {case_sensitive: false}
+    validates :age, numericality: { greater_than: 16}
+    validates :phone_number, presence: true
+    validates :bio, presence: true
+    validates :city, presence: true
 
 end
