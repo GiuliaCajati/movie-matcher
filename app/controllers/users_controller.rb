@@ -13,8 +13,8 @@ class UsersController < ApplicationController
   end 
 
   def create 
-    user = User.create(user_params)
-    redirect_to user_path(user)
+    @user = User.create(user_params)
+    redirect_to new_matches_path(@user.id)
   end 
 
   def edit 

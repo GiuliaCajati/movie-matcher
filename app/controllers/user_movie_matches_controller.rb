@@ -1,12 +1,22 @@
 class UserMovieMatchesController < ApplicationController
 
-    def new 
-        @usermoviematch = UserMovieMatch.new 
+    def new_matches
+        @usermoviematch = UserMovieMatch.new
+        @user = User.find(params[:id])
     end 
+
     
-    def create 
-        User.find(params[:user_id.to_i]).create_user_movie_match(params[:movie_id])
+    def create_new_matches
+        @user = User.find(params[:id])
+        params[:user_movie_match][:movie_id].each do |movie_id|
+        if movie_id.length == 0 
+            next 
+            buybug
+        else
+        UserMovieMatch.create(movie_id: movie_id, user_id: params[:id])
         redirect_to user_path(@user)
+            end
+        end
     end 
 
     private 
@@ -14,5 +24,6 @@ class UserMovieMatchesController < ApplicationController
     # def matches_params(*args)
     #     params.require(:usermoviematch).permit(*args)
     # end 
+
 end
 

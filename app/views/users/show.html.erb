@@ -6,7 +6,7 @@
 <br>
 <h4>Bio: <%= @user.bio %></h4>
 <br><br>
-<img src=<%= @user.photo %> height="300">
+<img src=<%= @user.photo %>>
 <br>
 <h3>Favorite Movies:</h3>
 <ol>
@@ -17,4 +17,3 @@
 </div>
 
 <%= link_to "Edit User", edit_user_path(@user)%>
-<%= link_to "Add Movies", new_user_movie_match_path %>

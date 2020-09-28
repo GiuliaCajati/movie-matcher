@@ -9,7 +9,7 @@ class User < ApplicationRecord
                 next 
            else
                movie_selection = Movie.find(movie_id.to_i)
-               UserMovieMatch.create(user_id: self, movie_id: movie_selection)
+               UserMovieMatch.create(user_id: self.id, movie_id: movie_selection)
            end 
         end 
     end
