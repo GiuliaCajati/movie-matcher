@@ -5,13 +5,14 @@ class UserMovieMatchesController < ApplicationController
     end 
     
     def create 
-        usermoviematch = UserMovieMatch.create(matches_params)
+        User.find(params[:user_id.to_i]).create_user_movie_match(params[:movie_id])
         redirect_to user_path(@user)
     end 
 
     private 
 
-    def matches_params 
-        params.require(:usermoviematch).permit(:user_id, :movie_id)
-    end 
+    # def matches_params(*args)
+    #     params.require(:usermoviematch).permit(*args)
+    # end 
 end
+

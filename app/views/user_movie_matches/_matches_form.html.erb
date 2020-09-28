@@ -1,10 +1,7 @@
+
 <%= form_for @usermoviematch do |f| %>
-<%= f.label :name, "User Name:" %>
-<%= f.collection_select(:user_id, User.all, :id, :name)%>
-<br>
-<br>
 <%= f.label :title, "Movie:" %>
-<%= f.collection_select(:movie_id, Movie.all, :id, :title)%>
+<%= f.collection_check_boxes( :movie_id, Movie.all, :id, :title, {}, { multiple: true, size: 10 })%>
 <br>
 <br>
 <%= f.submit button_text %>
