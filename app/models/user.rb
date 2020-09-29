@@ -10,10 +10,11 @@ class User < ApplicationRecord
     validates :city, presence: true
 
 
+    
     def number_of_matches
         current_list = self.movie_ids
         user_to_matches = {}
-        User.all.map do |user|
+        User.where(city: self.city).map do |user|
         matches = (user.movie_ids & current_list).count
         user_to_matches[user.id] = matches
         end
