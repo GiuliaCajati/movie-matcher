@@ -75,7 +75,8 @@ end
                 phone_number: Faker::PhoneNumber.cell_phone, 
                 bio: Faker::Quote.most_interesting_man_in_the_world, 
                 photo: user_photos.sample, 
-                city_id: rand_city_id)
+                city_id: rand_city_id,
+                password: "password")
 end
 
 
@@ -85,3 +86,4 @@ User.all.each do |user|
         UserMovieMatch.create(user_id: user.id, movie_id: rand_movie_id)
     end
 end
+

@@ -1,11 +1,12 @@
 <h2> Welcome </h2>
 
+<%= flash.now[:no_user] %>
+<%= flash[:message] %>
 
-
-
-<%= form_for @user do |f| %>
-  <p>Username: <%= f.text_field :username %> </p>
-  <p>Password: <%= f.password_field :password %> </p>
-  <p>Confirm Password: <%= f.password_field :password_confirmation %> </p>
-  <%= f.submit %>
+<%= form_tag welcome_path do %>
+    <%= label_tag :username %><br>
+    <%= text_field_tag :name %><br><br>
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %><br><br>
+    <%= submit_tag "Login" %>
 <% end %>

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :users
   get "/matches/:id", to: "users#matches", as: "matches"
 
-  get "/", to: "sessions#welcome"
-  
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/", to: "sessions#welcome", as: "welcome"
+  post "/", to: "sessions#process_login", as: "process_login"
+  get "/logout", to: "sessions#logout"
+
 end
