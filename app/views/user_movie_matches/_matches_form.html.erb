@@ -1,8 +1,9 @@
 
 <%= form_for(@usermoviematch, url: create_new_matches_path) do |f| %>
 <%= f.label :title, "Movie:" %>
-<%= f.collection_check_boxes(:movie_id, Movie.all, :id, :title, {}, { multiple: true, size: 10 })%>
+<%= f.collection_check_boxes(:movie_id, Movie.all, :id, :title, {}, { multiple: true, max: 2 })%>
 <br>
 <br>
 <%= f.submit %>
 <% end %>
+

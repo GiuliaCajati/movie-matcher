@@ -11,12 +11,11 @@ class UserMovieMatchesController < ApplicationController
         params[:user_movie_match][:movie_id].each do |movie_id|
         if movie_id.length == 0 
             next 
-            buybug
         else
         UserMovieMatch.create(movie_id: movie_id, user_id: params[:id])
-        redirect_to user_path(@user)
             end
         end
+        redirect_to user_path(@user)
     end 
 
     private 
