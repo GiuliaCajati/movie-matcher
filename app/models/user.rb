@@ -9,4 +9,28 @@ class User < ApplicationRecord
     validates :bio, presence: true
     validates :city, presence: true
 
+
+    def number_of_matches
+        current_list = self.movie_ids
+        user_to_matches = {}
+        User.all.map do |user|
+        matches = (user.movie_ids & current_list).count
+        user_to_matches[user.id] = matches
+        end
+        user_to_matches
+    end
+    
+    def top_matches 
+       sorted_matches = self.number_of_matches.sort_by{|k, v| v}.reverse
+        top_five = sorted_matches[1...6]
+    end
+
+    def friends
+        friend_hash = {}
+        self.top_matches.each do |match|
+            friend_hash[User.find(match[0]).name] = match[1]
+        end
+        friend_hash
+    end
+
 end
