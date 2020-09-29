@@ -11,7 +11,7 @@ class UserMovieMatchesController < ApplicationController
         @error_var = false
         if params[:user_movie_match][:movie_id].count > 2
             @error_var = true  
-            redirect_to user_path(@user) 
+            render "usermoviematch/newmatches"
         else 
         params[:user_movie_match][:movie_id].each do |movie_id|
         if movie_id.length == 0 
