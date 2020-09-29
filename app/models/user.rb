@@ -2,6 +2,8 @@ class User < ApplicationRecord
     belongs_to :city 
     has_many :user_movie_matches
     has_many :movies, through: :user_movie_matches
+    
+    has_secure_password 
 
     validates :name, presence: true, uniqueness: {case_sensitive: false}
     validates :age, numericality: { greater_than: 16}
