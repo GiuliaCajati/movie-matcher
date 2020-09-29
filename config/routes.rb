@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :cities
   resources :movies
   resources :users
+  get "/matches/:id", to: "users#matches", as: "matches"
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

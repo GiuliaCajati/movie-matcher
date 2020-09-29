@@ -1,0 +1,13 @@
+<h2><%= @user.name %>'s Top 5 Matches</h2>
+<br>
+<ul>
+  <% @friends.each do |name, count| %>
+<li><b><%= link_to name, user_path(User.find_by(name: name)) %></b>
+  , Number of matches: <%= count %><br><em>Their top 10: </em>
+  <% User.find_by(name: name).fav_movie_titles.each do |title| %>
+  <%= title %><br>
+<% end %>
+</li>
+<br>
+  <% end %>
+</ul>

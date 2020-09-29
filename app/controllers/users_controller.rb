@@ -31,6 +31,11 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end 
 
+  def matches 
+    @user = User.find(params[:id])
+    @friends = @user.friends
+  end
+
   private 
 
   def user_params 

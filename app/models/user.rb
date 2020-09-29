@@ -33,4 +33,8 @@ class User < ApplicationRecord
         friend_hash
     end
 
+    def fav_movie_titles
+        self.movie_ids.map {|movie| Movie.find(movie).title}
+    end
+
 end
