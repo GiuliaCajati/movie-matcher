@@ -11,6 +11,8 @@ class User < ApplicationRecord
     validates :bio, presence: true
     validates :city, presence: true
 
+    # before_save :has_ten_movies
+
 
     
     def number_of_matches
@@ -40,4 +42,10 @@ class User < ApplicationRecord
         self.movie_ids.map {|movie| Movie.find(movie).title}
     end
 
+    # private
+
+    # def has_ten_movies
+
+
+    # end 
 end
