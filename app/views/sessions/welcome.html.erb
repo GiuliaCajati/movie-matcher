@@ -1,17 +1,39 @@
-<h2> Welcome </h2>
+<ul>
+<a>
+    <%= link_to "All Users", users_path, class: "head"  %> 
+    <%= link_to "All Movies", movies_path, class: "head" %> 
+</a>
+</ul>
+
+<div id="rcorners2">
+<h2> FILMFANATICS </h2>
+<i class= "sub" >  Click with your favorite flick. </i>
 
 <%= flash.now[:no_user] %>
 <%= flash[:message] %>
 
 <%= form_tag welcome_path do %>
-    <%= label_tag :username %><br>
-    <%= text_field_tag :name %><br><br>
-    <%= label_tag :password %><br>
-    <%= password_field_tag :password %><br><br>
-    <%= submit_tag "Login" %>
+<br>
+    <%= label_tag :username, "USERNAME" %><br>
+    <%= text_field_tag :name, "", class: 'textfield' %><br><br>
+    <%= label_tag :password, "PASSWORD" %><br>
+    <%= password_field_tag :password, "", class: 'textfield' %><br><br>
+    <div><%= submit_tag "Login", class: "loginbtn" %></div>
 <% end %>
-
 <br>
 
-<%= button_to "Create New User", 'users/new', method: :get %>
+<%= button_to "Create New User", 'users/new', class: "loginbtn", method: :get %> 
+</div>
 
+
+
+
+
+
+
+<div class="home-video-wrapper">
+<video autoplay muted loop id="myVideo">
+  <source src=<%='/assets/movie.mp4'%>  type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
