@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resources :user_movie_matches, only: [:create]
+  resources :user_movie_matches, only: [:edit, :update]
   get "user_movie_matches/:id", to: "user_movie_matches#new_matches", as: "new_matches"
   post "user_movie_matches/:id", to: "user_movie_matches#create_new_matches", as: "create_new_matches"
 

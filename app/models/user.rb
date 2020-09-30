@@ -42,6 +42,8 @@ class User < ApplicationRecord
         self.movie_ids.map {|movie| Movie.find(movie).title}
     end
 
+
+
     # private
 
     # def has_ten_movies

@@ -26,6 +26,19 @@ class UserMovieMatchesController < ApplicationController
     end 
     end 
 
+    def edit
+        @usermoviematch = UserMovieMatch.new
+        @user = User.find(params[:id])
+    end
+
+    def update 
+        @user = User.find(params[:id])
+        @user.user_movie_matches.destroy_all  
+        @user.create_new_matches
+    end 
+
+    
+
     private 
 
     # def matches_params(*args)
