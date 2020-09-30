@@ -10,9 +10,9 @@ body {
 
 #side-bar {
 
-    height: 1000px;
+    height: 5000px;
     width: 20%;
-    background-color: whitesmoke;
+    background-color: rgb(238, 240, 231);
     position: absolute;
 
 }
@@ -35,7 +35,7 @@ body {
 
 .profile-data {
     padding-top: 5%;
-  padding-right: 20%;
+  padding-right: 10%;
   display: inline-block; 
   float: right;
 
@@ -52,4 +52,13 @@ body {
     position: relative;
     padding-left: 30%;
     padding-top: 15%;
+}
+
+#all-users {
+    margin-left: 7%;
+    margin-right: 7%;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(10, 1fr);
 }

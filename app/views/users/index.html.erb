@@ -2,8 +2,11 @@
 <br>
 <h2>All the People</h2>
 <br>
-<div>
+<div id="all-users">
 <% @users.each do |user| %>
-  <p><%= link_to user.name, user_path(user) %><br>  City:<%= user.city.name %></p><br>
+    <p> <a href="<%= user_path(user)%>"><img src= <%= user.photo %> style="height: 200px; width: 200px; border-radius: 7%;"></a>
+    <%= link_to user.name, user_path(user) %><br>  
+    City:<%= user.city.name %></p><br>
  <% end %>
  </div>
+
