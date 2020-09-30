@@ -6,7 +6,7 @@
 </ul>
 
 <div id="rcorners2">
-<h2> FILMFANATICS </h2>
+<h2> MOVIEMATCHER </h2>
 <i class= "sub" >  Click with your favorite flick. </i>
 
 <%= flash.now[:no_user] %>
@@ -21,19 +21,19 @@
     <div><%= submit_tag "Login", class: "loginbtn" %></div>
 <% end %>
 <br>
-
 <%= button_to "Create New User", 'users/new', class: "loginbtn", method: :get %> 
 </div>
 
-
-
-
-
-
-
+<%# background video%>
 <div class="home-video-wrapper">
 <video autoplay muted loop id="myVideo">
   <source src=<%='/assets/movie.mp4'%>  type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 </div>
+
+<style>
+.header {
+    display: none
+}
+</style>

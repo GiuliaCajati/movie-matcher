@@ -87,3 +87,4 @@ User.all.each do |user|
     end
 end
 
+#image: '/assets/movie1.jpg'
