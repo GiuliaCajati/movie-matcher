@@ -1,13 +1,11 @@
-<ul>
-<a>
-    <%= link_to "All Users", users_path, class: "head"  %> 
-    <%= link_to "All Movies", movies_path, class: "head" %> 
-</a>
-</ul>
 
-<div id="rcorners2">
+
+<br>
+<br>
+<div id="login-box">
+<div id="inner-login-box">
 <h2> MOVIEMATCHER </h2>
-<i class= "sub" >  Click with your favorite flick. </i>
+<i class= "sub" >  Click with your favorite flick. </i><br><br>
 
 <%= flash.now[:no_user] %>
 <%= flash[:message] %>
@@ -21,7 +19,9 @@
     <div><%= submit_tag "Login", class: "loginbtn" %></div>
 <% end %>
 <br>
-<%= button_to "Create New User", 'users/new', class: "loginbtn", method: :get %> 
+<%= button_to "Sign Up", 'users/new', class: "loginbtn", method: :get %> 
+
+</div>
 </div>
 
 <%# background video%>

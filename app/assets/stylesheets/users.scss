@@ -1,6 +1,55 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.profile {
-    margin-right: 50px;
+
+body {
+
+     background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png'); 
+     color: #121212;
+}
+
+#side-bar {
+
+    height: 1000px;
+    width: 20%;
+    background-color: whitesmoke;
+    position: absolute;
+
+}
+
+#profile {
+ margin-bottom:100px;
+ margin-right: 50px;
+ position: relative;
+
+}
+
+.profile-name-header {
+    padding: 50px 0 50px 0;
+}
+
+.profile-photo {
+    padding-top: 8%;
+    padding-left: 10%;
+}
+
+.profile-data {
+    padding-top: 5%;
+  padding-right: 20%;
+  display: inline-block; 
+  float: right;
+
+}
+
+.edit-user-button {
+
+    padding-top: 30px;
+
+}
+
+.favorite-movies {
+
+    position: relative;
+    padding-left: 30%;
+    padding-top: 15%;
 }

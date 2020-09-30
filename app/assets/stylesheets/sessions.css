@@ -1,6 +1,6 @@
 /* all user/ all movies path */
 
-.head {
+.navheader {
     text-transform: uppercase;
     padding: 8px;
     border: 2px solid #494949 !important;
@@ -11,6 +11,7 @@
     font-size: 15px;
     color: white;
     font-family: Courier;
+    
 }
 
 
@@ -18,27 +19,36 @@
 
 .sub {
     color: white;
+    text-align: center;
 }
 
 
 /* login form/ title */
 
-#rcorners2 {
-    padding: 100px;
-    text-align: center;
-    width: 200px;
+#login-box {
+    text-align: center !important;
+    width: 30%;
     height: 20%;
     margin: auto;
     text-align: center;
     vertical-align: middle;
     color: rgba(166, 186, 199, 0.74);
     font-family: courier;
+    
+}
+
+#inner-login-box {
+    padding: 20px;
+    background: rgb(238, 238, 230);
+    margin-top: 10%; 
+    opacity: 75%;
+    border-radius: 10%;
 }
 
 
 /* create new user and sign in btn hover */
 
-.head:hover {
+.navheader:hover {
     border-radius: 50px;
     border-color: #494949 !important;
     transition: all 0.3s ease 0s;
@@ -87,3 +97,4 @@
     height: 100%;
     width: 100%;
 }
+

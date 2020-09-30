@@ -11,7 +11,7 @@ class User < ApplicationRecord
     validates :bio, presence: true
     validates :city, presence: true
 
-    # before_save :has_ten_movies
+    
 
 
     

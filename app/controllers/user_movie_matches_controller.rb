@@ -1,5 +1,7 @@
 class UserMovieMatchesController < ApplicationController
 
+    before_action :authorize
+
     def new_matches
         @usermoviematch = UserMovieMatch.new
         @user = User.find(params[:id])
@@ -15,6 +17,7 @@ class UserMovieMatchesController < ApplicationController
             @usermoviematch = UserMovieMatch.new
             render :new_matches
         else 
+         @user.user_movie_matches.destroy_all
         params[:user_movie_match][:movie_id].each do |movie_id|
         if movie_id.length == 0 
             next 
@@ -32,8 +35,7 @@ class UserMovieMatchesController < ApplicationController
     end
 
     def update 
-        @user = User.find(params[:id])
-        @user.user_movie_matches.destroy_all  
+        @user = User.find(params[:id])     
         @user.create_new_matches
     end 
 
