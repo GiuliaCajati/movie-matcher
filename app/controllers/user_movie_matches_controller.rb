@@ -1,6 +1,6 @@
 class UserMovieMatchesController < ApplicationController
 
-    before_action :authorize
+    before_action :authorized
 
     def new_matches
         @usermoviematch = UserMovieMatch.new

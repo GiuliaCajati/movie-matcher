@@ -1,3 +1,29 @@
 // Place all the styles related to the UserMovieMatches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.new_user_movie_match {
+
+  width: 90%;
+  padding-left: 10%;
+  padding-top: 30px;
+  font-size: .9rem;
+  padding-bottom: 10%;
+}
+
+.checkboxes  {
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: .6rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.checkboxes label {
+  display: inline;
+}
+
+.movie-list-form-header {
+  padding: 15px 0 15px 30px;
+
+}
+

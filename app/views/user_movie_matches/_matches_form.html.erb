@@ -9,10 +9,18 @@
 
 
 <%= form_for(@usermoviematch, url: create_new_matches_path) do |f| %>
-<%= f.label :title, "Movie:" %>
-<%= f.collection_check_boxes(:movie_id, Movie.all, :id, :title, {}, { multiple: true, max: 2 })%>
+<div class="checkboxes">
+
+<%= f.collection_check_boxes(:movie_id, Movie.all, :id, :title, {}, { multiple: true, max: 2 }) do |b| %>
+<p>
+<%= b.check_box %>
+<%= b.label  %>
+</p>
+<% end %>
+</div>
 <br>
 <br>
-<%= f.submit %>
+</ul>
+<%= f.submit "Submit Favorites" %>
 <% end %>
 
