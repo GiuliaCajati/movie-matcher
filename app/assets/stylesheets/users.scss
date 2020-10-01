@@ -1,64 +1,61 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 
 body {
 
-     background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png'); 
-     color: #121212;
+    background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png'); 
+    color: #121212;
 }
 
 #side-bar {
 
-    height: 5000px;
-    width: 20%;
-    background-color: rgb(238, 240, 231);
-    position: absolute;
+   height: 5000px;
+   width: 20%;
+   background-color: rgb(238, 240, 231);
+   position: absolute;
 
 }
 
 #profile {
- margin-bottom:100px;
- margin-right: 50px;
- position: relative;
+margin-bottom:100px;
+margin-right: 50px;
+position: relative;
 
 }
 
 .profile-name-header {
-    padding: 50px 0 50px 0;
+   padding: 50px 0 50px 0;
 }
 
 .profile-photo {
-    padding-top: 8%;
-    padding-left: 10%;
+   padding-top: 8%;
+   padding-left: 10%;
 }
 
 .profile-data {
-    padding-top: 5%;
-  padding-right: 10%;
-  display: inline-block; 
-  float: right;
+   padding-top: 5%;
+ padding-right: 10%;
+ display: inline-block; 
+ float: right;
 
 }
 
 .edit-user-button {
 
-    padding-top: 30px;
+   padding-top: 30px;
 
 }
 
 .favorite-movies {
 
-    position: relative;
-    padding-left: 30%;
-    padding-top: 15%;
+   position: relative;
+   padding-left: 30%;
+   padding-top: 15%;
 }
 
 #all-users {
-    margin-left: 7%;
-    margin-right: 7%;
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    grid-template-columns: repeat(10, 1fr);
+   margin-left: 7%;
+   margin-right: 7%;
+   display: grid;
+   grid-column-gap: 2rem;
+   grid-row-gap: 2rem;
+   grid-template-columns: repeat(10, 1fr);
 }

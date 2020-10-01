@@ -55,11 +55,13 @@ user_photos = ["https://ca.slack-edge.com/T02MD9XTF-U0185TA4UNR-f0bc51457b29-512
 # city_name = ["Washington, DC", "New York", "Los Angeles"]
 
 
-
+i = 1
 50.times do 
     Movie.create(title: Faker::Movie.title, 
                 genre: Faker::Book.genre,
-                quote: Faker::Quote.famous_last_words)
+                quote: Faker::Quote.famous_last_words,
+                photo: "movie#{i}.jpg")
+                i += 1
 end 
 
 
