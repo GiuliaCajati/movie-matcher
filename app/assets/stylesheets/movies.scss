@@ -1,3 +1,37 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#all-movies {
+  padding-top: 5%;
+  margin-left: 10%;
+ 
+  display: grid;
+  grid-column-gap: 5rem;
+  grid-row-gap: 3rem;
+  grid-template-columns: repeat(4, 2fr);
+}
+
+#movie-profile {
+  padding-top: 7%;
+}
+
+.movies-index-header {
+  padding-top: 5%;
+  padding-left: 4%;
+
+}
+
+.movie-page-photo {
+  float: left;
+  padding-left: 10%;
+
+}
+
+.movie-info {
+  float: left;
+  padding-left: 10%;
+  padding-top: 5%;
+  width: 700px;
+}
+
