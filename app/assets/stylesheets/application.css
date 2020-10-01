@@ -21,7 +21,7 @@
 }
 
 .header {
-    background-color: #f1f1f1;
+    background-color: #c6a39a;
     text-align: right;
     padding: 20px 10px;
     overflow: hidden;
@@ -29,7 +29,7 @@
 
 .header a {
     float: right;
-    color: black;
+    color: #c6a39a;
     padding: 12px;
     font-size: 18px;
     line-height: 25px;
@@ -48,5 +48,13 @@
     padding: 5px 10px 0 0;
     float: right;
     display: block;
-    
+    color: #c6a39a;
+}
+
+.favorite-title h3 {
+    font-family: Courier;
+    color: grey;
+    font-size: 50px;
+    white-space: nowrap;
+    padding-left: 10px;
 }

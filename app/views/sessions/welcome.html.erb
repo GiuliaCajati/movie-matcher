@@ -2,24 +2,33 @@
 
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <div id="login-box">
 <div id="inner-login-box">
-<h2> MOVIEMATCHER </h2>
+<h3> MOVIEMATCHER </h3>
 <i class= "sub" >  Click with your favorite flick. </i><br><br>
 
+<div class= "error_login">
 <%= flash.now[:no_user] %>
 <%= flash[:message] %>
+</div>
 
 <%= form_tag welcome_path do %>
 <br>
-    <%= label_tag :username, "USERNAME" %><br>
-    <%= text_field_tag :name, "", class: 'textfield' %><br><br>
-    <%= label_tag :password, "PASSWORD" %><br>
-    <%= password_field_tag :password, "", class: 'textfield' %><br><br>
-    <div><%= submit_tag "Login", class: "loginbtn" %></div>
-<% end %>
+    
+    <%= text_field_tag :name, "", class: 'textfield', placeholder: 'username' %><br><br>
+    
+    <%= password_field_tag :password, "", class: 'textfield', placeholder: 'password'%><br><br>
+    <%= submit_tag "Login", class: "loginbtn" %>
+    
+<% end %> 
 <br>
 <%= button_to "Sign Up", 'users/new', class: "loginbtn", method: :get %> 
+ 
+
 
 </div>
 </div>

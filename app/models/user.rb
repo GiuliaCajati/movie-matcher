@@ -42,6 +42,11 @@ class User < ApplicationRecord
         self.movie_ids.map {|movie| Movie.find(movie).title}
     end
 
+    def first_name 
+       name = self.name.scan(/(\w+)/).first.first
+       return "#{name}" +"'s"
+    end 
+
 
 
     # private

@@ -3,22 +3,29 @@
 .navheader {
     text-transform: uppercase;
     padding: 8px;
-    border: 2px solid #494949 !important;
+    border: 2px solid #c6a39a !important;
     border-radius: 2px;
     display: inline-block;
     transition: all 0.3s ease 0s;
     opacity: 0.9;
-    font-size: 15px;
-    color: white;
+    font-size: 12px;
+    color: black;
     font-family: Courier;
-    
+    background: #e6e6d8;
+}
+
+
+/*error*/
+
+.error_login {
+    color: rainbow
 }
 
 
 /*subtitle:"Click with your favorite flick." */
 
 .sub {
-    color: white;
+    color: grey;
     text-align: center;
 }
 
@@ -27,21 +34,20 @@
 
 #login-box {
     text-align: center !important;
-    width: 30%;
-    height: 20%;
+    width: 20%;
+    height: 8%;
     margin: auto;
     text-align: center;
     vertical-align: middle;
-    color: rgba(166, 186, 199, 0.74);
+    color: black;
     font-family: courier;
-    
 }
 
 #inner-login-box {
-    padding: 20px;
-    background: rgb(238, 238, 230);
-    margin-top: 10%; 
-    opacity: 75%;
+    padding: 17px;
+    background: rgb(219, 219, 213);
+    margin-top: 10%;
+    opacity: 55%;
     border-radius: 10%;
 }
 
@@ -67,11 +73,11 @@
     text-transform: uppercase;
     padding: 5px;
     border: 2px solid #494949 !important;
-    border-radius: 2px;
+    border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
     opacity: 0.5;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .loginbtn:hover {
@@ -97,4 +103,3 @@
     height: 100%;
     width: 100%;
 }
-

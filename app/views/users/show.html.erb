@@ -1,8 +1,13 @@
-<div id="side-bar">
-</div>
 
+
+
+<div id="side-bar">
+<img src= "/assets/moviecollage.jpg" style="height:1000px; width:300px;border-radius:0%; opacity:0.7; "> 
+<img src= "/assets/moviecollage2.jpg" style="height:1000px; width:300px;border-radius:0%; opacity:0.7; "> 
+</div>
+<br>
 <div id="profile">
- 
+
   <div class="profile-photo" style="display: inline-block;">
   <img src=<%= @user.photo %> style="border-radius:50%; width:300px;">
   </div>
@@ -16,18 +21,23 @@
   <br>
   <h5>Phone Number: <%= @user.phone_number %></h5>
   <br>
-  <h5>Bio: <i><%= @user.bio %></i></h5>
+  <h5>Bio: <%= @user.bio %></h5>
   <div class="edit-user-button">
   <%= link_to "Edit Profile", edit_user_path(@user)%>
   </div>
 </div>
+</div>
 
+<div class="favorite-title-and-image" >
+<img src= "/assets/clip.jpg" style="width:500px;" >
+<div class="favorite-title">
+<h3> <%=@first_name%> Favorite Movies:</h3>
+</div>
 </div>
 
 
 
 <div class="favorite-movies">
-<h3>Favorite Movies:</h3>
   <div class="movies-list">
   <ol>
     <% @user.movies.each do |movie| %>
@@ -35,14 +45,20 @@
       <% end %>
   </ol>
   </div>
-  <div class="edit-movie-favs-button">
+ <br>
+<div class="see-matches-button">
+<a class= "navheader" <%= link_to "See Matches", matches_path(@user)%> </a>
+<br>
+<br>
+ <div class="edit-movie-favs-button">
 <%= link_to "Edit Movie List", edit_user_movie_match_path(@user)%>
 </div>
 </div>
 
-
-<div class="see-matches-button">
-<%= link_to "See Matches", matches_path(@user)%>
 </div>
-<br>
+
+
+
+
+
 
