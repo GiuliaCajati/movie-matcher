@@ -12,7 +12,7 @@ class User < ApplicationRecord
     validates :city, presence: true
 
     
-
+  
 
     
     def number_of_matches
@@ -47,7 +47,25 @@ class User < ApplicationRecord
        return "#{name}" +"'s"
     end 
 
+    def first_match
+        User.find(self.top_matches.first[0])
+    end
 
+    def second_match
+        User.find(self.top_matches.second[0])
+    end
+
+    def third_match
+        User.find(self.top_matches.third[0])
+    end
+
+    def fourth_match
+        User.find(self.top_matches.fourth[0])
+    end
+
+    def fifth_match
+        User.find(self.top_matches.fifth[0])
+    end
 
     # private
 
