@@ -6,7 +6,8 @@
 <br>
 <div id="all-users">
 <% @users.each do |user| %>
-    <p class= "user_index_container"> <a href="<%= user_path(user)%>"><img src= <%= user.photo %> ></a>
+    <p class= "user_index_container"> <a href="<%= user_path(user)%>">
+    <img src= <%= user.photo %> ></a>
     <b class= "user_text_cont">
     <i class="user_index_text">
     <a <%= link_to user.name, user_path(user) %>  </a>
