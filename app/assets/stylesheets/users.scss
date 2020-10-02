@@ -2,9 +2,11 @@
     // They will automatically be included in application.css.
     // You can use Sass (SCSS) here: https://sass-lang.com/
     body {
-        background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png');
-        color: #121212;
-    }
+        background: "/assets/backgroundfilm.jpg";   
+        background-size: 100%; 
+        color: #121212; 
+        
+     }
 
     #carouselExampleIndicators a {
         color: rgba(230, 229, 225, 0.993);
@@ -140,6 +142,7 @@
         padding-top: 0;
         color: grey;
         font-family: Courier;
+        text-shadow: 2px rgb(73, 72, 72);
     }
 
     #all-users {
@@ -222,3 +225,7 @@
     }
 
 
+.favorite-title h3{
+    
+    text-shadow: 1px 2px rgb(240, 236, 236);
+}

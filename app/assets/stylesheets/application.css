@@ -16,7 +16,10 @@
 
  body {
     font-family: Courier;
- }
+        background: url(backgroundfilm.jpg);
+        background-size: 100%;    
+        color: #121212; 
+    }
  
 .field_with_errors {
     padding: 2px;
