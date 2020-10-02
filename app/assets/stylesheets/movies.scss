@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 78%;
     opacity: 0;
     transition: .5s ease;
     background-color: #e6e6d8;
@@ -41,11 +41,12 @@
     text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
     margin: auto;
     width: 30%;
+    padding-bottom: 30px;
 }
 
 .movie_index_container img {
-    height: 300px;
-    width: 250px;
+    height: 240px;
+    width: 170px;
     border-radius: 3%;
 }
 

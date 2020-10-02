@@ -14,7 +14,7 @@
     #carouselExampleIndicators img {
         width: 500px;
         height: 500px;
-        overflow: hidden;
+        object-fit:cover;
     }
 
     #carouselExampleIndicators {
@@ -71,11 +71,18 @@
     }
     /* profile photo*/
 
-    #all-users img {
+    .users_index_container {
         height: 200px;
+        width: 200px; 
+       
+    }
+    .user_index_container img {
+       height: 200px;
         width: 200px;
         border-radius: 3%;
         filter: sepia(50%);
+        object-fit:cover;
+        
     }
 
     #side-bar {
@@ -110,6 +117,7 @@
         padding-top: 8%;
         padding-left: 10%;
         filter: sepia(50%);
+        
     }
 
     .profile-data {
@@ -206,8 +214,8 @@
     }
 
     .carousel-caption {
-
         font-size: 13px;
+        text-shadow: 1px 1px 2px rgb(78, 77, 77);
     }
 
 

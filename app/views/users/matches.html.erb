@@ -20,6 +20,8 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -98,7 +100,7 @@
         <br>
     <p>Number of matches: <%= @user.top_matches.fifth[1] %> </p>
     <br>
-    <p>Their top 10: </em>
+    <p><i>Their top 10: </i></em>
       <ul>
         <% User.find(@user.fifth_match.id).fav_movie_titles.each do |title| %>
       <%= title %> <br>
