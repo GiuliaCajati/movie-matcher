@@ -8,16 +8,12 @@
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     grid-template-columns: repeat(5, 1fr);
-    filter: sepia(50%);
+    filter: grayscale(50%);
 }
 
 .movie_index_container {
     position: relative;
     width: 100%;
-}
-
-#movie-profile {
-    padding-top: 7%;
 }
 
 .movie_text_cont {
@@ -41,6 +37,7 @@
     text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
     margin: auto;
     width: 30%;
+    margin-bottom: 3%;
 }
 
 .movie_index_container img {
@@ -52,13 +49,18 @@
 .movie-page-photo {
     float: left;
     padding-left: 10%;
-    filter: sepia(50%);
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    filter: grayscale(50%);
+    background-color: #bac2be;
 }
 
 .movie-info {
     float: left;
-    padding-left: 10%;
-    padding-top: 5%;
+    padding-left: 5%;
+    padding-top: 20%;
+    padding-bottom: 5%;
     width: 700px;
 }
 
@@ -70,4 +72,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+#popcorn {
+    padding-left: 1000px;
+    position: absolute;
 }
