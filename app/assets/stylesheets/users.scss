@@ -1,184 +1,213 @@
-            // Place all the styles related to the Users controller here.
-            // They will automatically be included in application.css.
-            // You can use Sass (SCSS) here: https://sass-lang.com/
-            body {
-                background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png');
-                color: #121212;
-            }
-            
-            #carouselExampleIndicators a {
-                color: rgba(230, 229, 225, 0.993);
-                font-size: 50px;
-            }
-            
-            #carouselExampleIndicators img {
-                width: 600px;
-                height: 600px;
-                overflow: hidden;
-            }
-            
-            #carouselExampleIndicators {
-                width: 600px;
-                height: 600px;
-            }
-            
-            .user_index_container {
-                position: relative;
-                width: 100%;
-            }
-            
-            .user-index-title {
-                font-family: "Oswald", Sans-serif;
-                text-transform: uppercase;
-                font-weight: 400;
-                font-size: 50px;
-                text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
-                margin: auto;
-                width: 30%;
-            }
-            
-            a {
-                color: rgb(86, 87, 95);
-            }
-            
-            p:hover b {
-                opacity: 1;
-            }
-            /* image text */
-            
-            .user_index_text {
-                color: #c6a39a;
-                font-size: 15px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-            }
-            
-            .user_text_cont {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 100%;
-                width: 100%;
-                opacity: 0;
-                transition: .5s ease;
-                background-color: #e6e6d8;
-            }
-            /* profile photo*/
-            
-            #all-users img {
-                height: 200px;
-                width: 200px;
-                border-radius: 3%;
-                filter: sepia(50%);
-            }
-            
-            #side-bar {
-                height: 2000px;
-                width: 20%;
-                background-color: rgb(238, 240, 231);
-                position: absolute;
-            }
-            
-            #side-bar img {
-                height: 1000px;
-                width: 300px;
-                opacity: 0.7;
-            }
-            
-            #profile {
-                margin-bottom: 100px;
-                margin-right: 50px;
-                position: relative;
-            }
-            
-            .profile-name-header {
-                padding: 50px 0 50px 0;
-                color: grey;
-                font-family: Courier;
-                font-size: 50px;
-                text-transform: uppercase;
-                text-align: center;
-            }
-            
-            .profile-photo {
-                padding-top: 8%;
-                padding-left: 10%;
-                filter: sepia(50%);
-            }
-            
-            .profile-data {
-                padding-top: 5%;
-                padding-right: 10%;
-                display: inline-block;
-                float: right;
-                width: 500px;
-            }
-            
-            .edit-user-button {
-                padding-top: 30px;
-            }
-            
-            .favorite-movies {
-                position: relative;
-                padding-left: 45%;
-                padding-top: 0;
-                color: grey;
-                font-family: Courier;
-            }
-            
-            #all-users {
-                margin-left: 7%;
-                margin-right: 7%;
-                display: grid;
-                grid-column-gap: 2rem;
-                grid-row-gap: 2rem;
-                grid-template-columns: repeat(10, 1fr);
-            }
-            
-            .favorite-title-and-image {
-                padding-top: 15%;
-                padding-left: 8%;
-                position: relative;
-                display: inline-block;
-            }
-            
-            .favorite-title {
-                display: inline-block;
-                margin-top: 190px;
-                position: absolute;
-                padding-left: 15px;
-            }
-            
-            .movies-list {
-                font-size: 25px;
-            }
-            
-            .form-content {
-                width: 40%;
-                right: 25%;
-                left: 25%;
-                padding-bottom: 50px;
-                text-align: center;
-                position: absolute;
-                background: url("/assets/form.jpg");
-            }
-            
-            .user-form-header {
-                padding: 15px 0 0 20px;
-            }
-            
-            .user-match-header {
-                font-family: "Oswald", Sans-serif;
-                text-transform: uppercase;
-                font-weight: 400;
-                font-size: 50px;
-                text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
-                margin: auto;
-                width: 50%;
-                padding: 2% 0;
-            }
+    // Place all the styles related to the Users controller here.
+    // They will automatically be included in application.css.
+    // You can use Sass (SCSS) here: https://sass-lang.com/
+    body {
+        background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png');
+        color: #121212;
+    }
+
+    #carouselExampleIndicators a {
+        color: rgba(230, 229, 225, 0.993);
+        font-size: 40px;
+    }
+
+    #carouselExampleIndicators img {
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    #carouselExampleIndicators {
+        width: 500px;
+        height: 500px;
+        
+    }
+
+    .user_index_container {
+        position: relative;
+        width: 100%;
+    }
+
+    .user-index-title {
+        font-family: "Oswald", Sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 50px;
+        text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+        margin: auto;
+        width: 30%;
+    }
+
+    a {
+        color: rgb(86, 87, 95);
+    }
+
+    p:hover b {
+        opacity: 1;
+    }
+    /* image text */
+
+    .user_index_text {
+        color: #c6a39a;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .user_text_cont {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #e6e6d8;
+    }
+    /* profile photo*/
+
+    #all-users img {
+        height: 200px;
+        width: 200px;
+        border-radius: 3%;
+        filter: sepia(50%);
+    }
+
+    #side-bar {
+        height: 2000px;
+        width: 20%;
+        background-color: rgb(238, 240, 231);
+        position: absolute;
+    }
+
+    #side-bar img {
+        height: 1000px;
+        width: 300px;
+        opacity: 0.7;
+    }
+
+    #profile {
+        margin-bottom: 100px;
+        margin-right: 50px;
+        position: relative;
+    }
+
+    .profile-name-header {
+        padding: 50px 0 50px 0;
+        color: grey;
+        font-family: Courier;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .profile-photo {
+        padding-top: 8%;
+        padding-left: 10%;
+        filter: sepia(50%);
+    }
+
+    .profile-data {
+        padding-top: 5%;
+        padding-right: 10%;
+        display: inline-block;
+        float: right;
+        width: 500px;
+    }
+
+    .edit-user-button {
+        padding-top: 30px;
+    }
+
+    .favorite-movies {
+        position: relative;
+        padding-left: 45%;
+        padding-top: 0;
+        color: grey;
+        font-family: Courier;
+    }
+
+    #all-users {
+        margin-left: 7%;
+        margin-right: 7%;
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .favorite-title-and-image {
+        padding-top: 15%;
+        padding-left: 8%;
+        position: relative;
+        display: inline-block;
+    }
+
+    .favorite-title {
+        display: inline-block;
+        margin-top: 190px;
+        position: absolute;
+        padding-left: 15px;
+    }
+
+    .movies-list {
+        font-size: 25px;
+    }
+
+    .form-content {
+        width: 40%;
+        right: 25%;
+        left: 25%;
+        padding-bottom: 50px;
+        text-align: center;
+        position: absolute;
+        background: url("/assets/form.jpg");
+    }
+
+    .user-form-header {
+        padding: 15px 0 0 20px;
+    }
+
+    .user-match-header {
+        font-family: "Oswald", Sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 40px;
+        text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+        margin: auto;
+        width: 50%;
+        padding: 2% 0;
+    }
+
+    .matches-bar img {
+        width: 200px;
+        filter: sepia(40%);
+        opacity: 30%;
+        
+    }
+    .right-side-bar {
+        width: 200px;
+        margin-right: 0;
+        display: inline;
+        float: right;
+        padding-left: 10px;
+        
+    }
+
+    .left-side-bar {
+        width: 15%;
+        position: absolute;
+        float: left;
+    }
+
+    .carousel-caption {
+
+        font-size: 13px;
+    }
+
+
